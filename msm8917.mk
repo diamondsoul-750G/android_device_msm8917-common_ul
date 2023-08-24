@@ -503,7 +503,3 @@ $(call inherit-product, vendor/samsung/msm8917-common/msm8917-common-vendor.mk)
 
 # Debug
 $(call inherit-product, $(LOCAL_PATH)/debug-tools/debug.mk)
-
-# Prebuilt Packages
-PRODUCT_PACKAGES += \
-    gcamgo
