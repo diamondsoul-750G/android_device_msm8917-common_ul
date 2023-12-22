@@ -400,10 +400,11 @@ PRODUCT_PACKAGES += \
     fstab.qcom \
     ueventd.qcom.rc
 
-ifneq ($(filter j6primelte,$(TARGET_DEVICE)),)
-    PRODUCT_COPY_FILES += \
-        $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
-endif
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
+
+#ifneq ($(filter j6primelte,$(TARGET_DEVICE)),)
+#endif
 # RenderScript HAL
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
@@ -417,7 +418,9 @@ PRODUCT_PACKAGES += \
     librmnetctl \
     libxml2 \
     libprotobuf-cpp-full \
-    libshims_ril
+    libshims_ril \
+    android.hardware.radio@1.3 \
+    android.hardware.radio@1.1
     
 # libc++demangle
 PRODUCT_PACKAGES += \

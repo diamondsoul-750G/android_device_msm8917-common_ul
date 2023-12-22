@@ -202,9 +202,9 @@ TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 BOARD_ROOT_EXTRA_FOLDERS := config omr efs
 
 # Recovery
-ifneq ($(filter j6primelte,$(TARGET_DEVICE)),)
-    TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.qcom
-endif
+TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.qcom
+#ifneq ($(filter j6primelte,$(TARGET_DEVICE)),)
+#endif
 
 # SELinux
 include device/qcom/sepolicy-legacy-um/SEPolicy.mk
